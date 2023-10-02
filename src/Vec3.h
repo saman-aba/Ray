@@ -6,6 +6,19 @@
 
 using std::sqrt;
 
+
+inline std::ostream& operator<<(std::ostream& out, const Vec3& v);
+inline Vec3 operator+(const Vec3 &u, const Vec3 &v);
+inline Vec3 operator-(const Vec3& u, const Vec3 &v);
+inline Vec3 operator*(const Vec3& u, const Vec3& v);
+inline Vec3 operator*(double t, const Vec3 &v);
+inline Vec3 operator*(const Vec3& v, double t);
+inline Vec3 operator/(const Vec3& v, double t);
+inline double dot(const Vec3& u, const Vec3& v);
+inline Vec3 cross(const Vec3& u, const Vec3& v);
+inline Vec3 unit_vector(const Vec3 &v);
+
+
 class Vec3 {
 public:
 	Vec3();
@@ -22,13 +35,17 @@ public:
 	Vec3& operator*=(const double t);
 	Vec3& operator/=(const double t);
 
+
 	double length() const;
 	double length_squared() const;
 
-private:
 	double e[3];
 };
 
+
+
+
 using Point3 = Vec3; // 3D point
 using Color = Vec3; // RGB Color
+
 #endif
