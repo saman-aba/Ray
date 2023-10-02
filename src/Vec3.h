@@ -7,18 +7,6 @@
 using std::sqrt;
 
 
-inline std::ostream& operator<<(std::ostream& out, const Vec3& v);
-inline Vec3 operator+(const Vec3 &u, const Vec3 &v);
-inline Vec3 operator-(const Vec3& u, const Vec3 &v);
-inline Vec3 operator*(const Vec3& u, const Vec3& v);
-inline Vec3 operator*(double t, const Vec3 &v);
-inline Vec3 operator*(const Vec3& v, double t);
-inline Vec3 operator/(const Vec3& v, double t);
-inline double dot(const Vec3& u, const Vec3& v);
-inline Vec3 cross(const Vec3& u, const Vec3& v);
-inline Vec3 unit_vector(const Vec3 &v);
-
-
 class Vec3 {
 public:
 	Vec3();
@@ -41,6 +29,17 @@ public:
 
 	double e[3];
 };
+
+inline std::ostream& operator<<(std::ostream& out, const Vec3& v);
+inline Vec3 operator+(const Vec3& u, const Vec3& v);
+inline Vec3 operator-(const Vec3& u, const Vec3& v);
+inline Vec3 operator*(const Vec3& u, const Vec3& v);
+inline Vec3 operator*(double t, const Vec3& v);
+inline Vec3 operator*(const Vec3& v, double t);
+inline Vec3 operator/(const Vec3& v, double t);
+inline double dot(const Vec3& u, const Vec3& v);
+inline Vec3 cross(const Vec3& u, const Vec3& v);
+inline Vec3 unit_vector(const Vec3& v);
 
 
 
