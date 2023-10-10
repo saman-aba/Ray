@@ -10,9 +10,8 @@ public:
 	Ray(const Point3&, const Vec3&);
 
 	Point3 origin() const;
-	Vec3 direction() const;
-
-	Point3 at(double t) const;
+    Vec3 direction() const;
+    Point3 at(double t) const;
 
 public:
 	Point3 _origin;
